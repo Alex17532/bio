@@ -26,7 +26,7 @@ function removeOverlay() {
 
 document.addEventListener("DOMContentLoaded", () => {
     const prefix = "⠐ ";
-    const titleText = "decal";
+    const titleText = "markovich";
     let index = 0;
     let isDeleting = false;
 
@@ -52,7 +52,7 @@ typeWriter();
 
 document.addEventListener("DOMContentLoaded", function () {
 const elements = document.querySelectorAll('.typewriter');
-const texts = ["i like cats", "web dev >:(", "dm for your own page on my site", "македонски"];
+const texts = ["i like cats", "t.me/markovichhhhh", "ig: markovich.alexander", "македонски"];
 const typingSpeed = 100;
 const pauseDuration = 1000;
 let currentIndex = 0;
