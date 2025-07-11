@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="#2F3136" name="theme-color">
+    <title></title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/users.css">
+    <link rel="stylesheet" href="/css/popup.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1&amp;f[]=array@400&amp;display=swap" rel="stylesheet">
+    <link rel="icon" href="/img/1267615175779815507.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" data-font="chillax" href="https://api.fontshare.com/v2/css?f[]=chillax@500&amp;display=swap">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bungee&family=Creepster&family=Gloria+Hallelujah&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+</head>
+
+<style>
+    body {
+        cursor: url(/img/extralsmall.png);
+    }
+    /* Animação básica */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      opacity: 0;
+    }
+    
+    /* Classes de delay */
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    /* ... outras classes de delay ... */
+    
+    /* Agrupe elementos para animação em seções */
+    .animation-group {
+      margin-bottom: 40px;
+    }
+
+    * {
+    cursor: url('/Aero.cur'), auto !important;
+}
+
+/* Para botões e links, você pode adicionar uma regra específica */
+a, button, .linkedAccountsRedirect svg, .popup-button {
+    cursor: url('/Aero.cur'), pointer !important;
+}
+
+        /* Force layout recalculation on page load */
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Media query debugging */
+        @media screen and (max-width: 768px) {
+            /* Ensure responsive elements are flexible */
+            * {
+                max-width: 100%;
+                box-sizing: border-box;
+            }
+        }
+  </style>
+<!-- <div id="background"></div>
+<div id="background-layer-1" class="background-layer"></div> -->
+
+    <!-- Este código deve ser adicionado ao seu HTML existente -->
+
+<body profile="" style="font-family: Satoshi, sans-serif; cursor: url('/img/extralsmall.png'), auto; background-color: #222222;">
+    <div class="video-container">
+        <div class="placeholder" style="background-image: url('/img/placeholder.png');"></div>
+        <video style="filter: contrast(1.2);" class="background" autoplay muted loop preload="auto" disablePictureInPicture>
+            <source src="/img/ingame.mp4" type="video/mp4">
+            <source src="/img/ingame.webm" type="video/webm">
+        </video>
+    </div>
+    
+
+    <div class="content" style="position: fixed; width: 100%; align-items: center; max-width: var(--containerWidth); display: flex; justify-content: center; flex-direction: column; gap: 15px; will-change: transform; transition: 700ms cubic-bezier(0.03, 0.98, 0.52, 0.99); transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+        <div class="container"  style="will-change: transform; transition: 0ms cubic-bezier(0.03, 0.98, 0.52, 0.99); transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+            <div class="elemento-para-animar delay-7">
+            <img style="opacity: 1;" class="avatar" src="/img/vaatartatar.png">
+        </div>
+
+        <div class="profileLayout">
+            <div class="elemento-para-animar delay-10">
+            <h1 class="profileUsername" style="color: #ffffff; text-shadow: 0 0 20px #ffffff;">A<span>lexander</span></h1></div>
+
+            <div class="elemento-para-animar delay-15">
+            <div class="profileBadges">
+                <div style="display: flex;" class="profileBadge dev">
+                    <svg class="profileBadge" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        xmlns="http://www.w3.org/2000/svg" height="1.3em" viewBox="0 0 24 24" width="1.3em">
+                        <path
+                            d="m21.58 11.4-4.28-7.39-.35-.6h-9.91l-.35.6-4.27 7.39-.35.6.35.6 4.27 7.39.35.6h9.92l.35-.6 4.28-7.39.35-.6zm-13.07-1.03-1.63 1.63 1.63 1.63v2.73l-4.36-4.36 4.37-4.37v2.74zm3.12 6.93-2.04-.63 3.1-9.98 2.04.64zm3.86-.93v-2.73l1.63-1.64-1.63-1.63v-2.74l4.36 4.37z"
+                            style="filter: drop-shadow(0 0 1.5px #ffffff) !important;" fill="#ffffff" />
+                    </svg>
+                </div>
+
+                <div class="profileBadge certif">
+                    <svg class="profileBadge" xmlns="http://www.w3.org/2000/svg"
+                        style="fill: #ffffff; filter: drop-shadow(0 0 1.5px #ffffff) !important;" width="1em"
+                        height="1em" viewBox="1 1.5 22 21">
+                        <path
+                            d="m8.6 22.5l-1.9-3.2l-3.6-.8l.35-3.7L1 12l2.45-2.8l-.35-3.7l3.6-.8l1.9-3.2L12 2.95l3.4-1.45l1.9 3.2l3.6.8l-.35 3.7L23 12l-2.45 2.8l.35 3.7l-3.6.8l-1.9 3.2l-3.4-1.45l-3.4 1.45Zm2.35-6.95L16.6 9.9l-1.4-1.45l-4.25 4.25l-2.15-2.1L7.4 12l3.55 3.55Z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="profileBadge staff">
+                    <svg class="profileBadge" xmlns="http://www.w3.org/2000/svg"
+                        style="fill: #ffffff; filter: drop-shadow(0 0 1.5px #ffffff) !important;" width="1em"
+                        height="1em" viewBox="1 1.5 22 21">
+                        <path
+                        d="m16.06 13.09l5.63 5.59l-3.32 3.28l-5.59-5.59v-.92l2.36-2.36h.92m.91-2.53L16 9.6l-4.79 4.8v1.97L5.58 22L2.3 18.68l5.59-5.59h1.97l.78-.78L6.8 8.46H5.5L2.69 5.62L5.31 3l2.8 2.8v1.31L12 10.95l2.66-2.66l-.96-1.01L15 5.97h-2.66l-.65-.65L15 2l.66.66v2.66L16.97 4l3.28 3.28c1.09 1.1 1.09 2.89 0 3.98l-1.97-2.01l-1.31 1.31Z">
+                        </path>
+                    </svg>
+                </div>
+                
+            </div>
+            </div>
+            <div class="elemento-para-animar delay-16"><h3 id="typingText" style="color: #ffffff;" class="profileBio"></h3>
+                <i><div id="typingTexts" style="display: none;">Automation &lt;&gt; Reverse Engineering &lt;&gt; Web Development &lt;&gt; Application Development</div></i></div>
+            <script src="/js/typing.js"></script>  
+            <script src="/js/discordStatus.js"></script>
+            <script src="/js/badgeAnim.js"></script>
+            <script src="/js/title.js"></script>
+            <script src="/js/row.js"></script>
+            <script src="/js/player.js"></script>
+            <script src="/js/container1-music1anim.js"></script>
+            <script src="/js/e1ditQ6vEJSZZqx57987sFCx3bRf.js"></script>
+            <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+            <script src="/js/discordUserImage.js"></script>
+            <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+            <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+            <script src="/js/lockscreen.js"></script>
+        </div>
+
+        <div class="linkedAccounts">
+            <!-- Discord -->
+<a data-type=".0x539." class="linkedAccountsRedirect" id="trigger-popup" target="_blank" href="https://discord.com/users/800806601124216922">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="1.96 4.26 20.03 15.53">
+        <path fill="currentColor" d="M14.82 4.26a10.14 10.14 0 0 0-.53 1.1a14.66 14.66 0 0 0-4.58 0a10.14 10.14 0 0 0-.53-1.1a16 16 0 0 0-4.13 1.3a17.33 17.33 0 0 0-3 11.59a16.6 16.6 0 0 0 5.07 2.59A12.89 12.89 0 0 0 8.23 18a9.65 9.65 0 0 1-1.71-.83a3.39 3.39 0 0 0 .42-.33a11.66 11.66 0 0 0 10.12 0q.21.18.42.33a10.84 10.84 0 0 1-1.71.84a12.41 12.41 0 0 0 1.08 1.78a16.44 16.44 0 0 0 5.06-2.59a17.22 17.22 0 0 0-3-11.59a16.09 16.09 0 0 0-4.09-1.35zM8.68 14.81a1.94 1.94 0 0 1-1.8-2a1.93 1.93 0 0 1 1.8-2a1.93 1.93 0 0 1 1.8 2a1.93 1.93 0 0 1-1.8 2zm6.64 0a1.94 1.94 0 0 1-1.8-2a1.93 1.93 0 0 1 1.8-2a1.92 1.92 0 0 1 1.8 2a1.92 1.92 0 0 1-1.8 2z"></path>
+    </svg>
+</a>
+
+<!-- Instagram -->
+<a data-type="markovich.alexander" class="linkedAccountsRedirect" id="trigger-popup" target="_blank" href="https://www.instagram.com/markovich.alexander/">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="1 0 15 17">
+        <path fill="currentColor" d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path>
+    </svg>
+</a>
+
+<!-- Telegram -->
+<a data-type="markovichhhhh" class="linkedAccountsRedirect" id="trigger-popup" target="_blank" href="https://t.me/markovichhhhh">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 24 24">
+        <path fill="currentColor" d="m20.665 3.717-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.785L22.89 5.283c.309-1.239-.473-1.8-1.225-1.566z"/>
+    </svg>
+</a>
+
+<!-- GitHub -->
+<a data-type="Alex17532" class="linkedAccountsRedirect" id="trigger-popup" target="_blank" href="https://github.com/Alex17532">
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2Z"/>
+    </svg>
+</a>
+
+        </div>
+    </div>
+
+    
+    <div class="elemento-para-animar delay-20">
+    <!-- Substitua o código atual das views por esse grupo de elementos -->
+    <div class="profileStats">
+    <!-- Seção de views -->
+    <div class="profileViews" data-type="Views">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+            <circle cx="12" cy="12" r="3"></circle>
+        </svg>
+        <span style="font-weight:400;font-size:17px">7,896</span>
+    </div>
+    
+    <!-- Separador -->
+    <div class="separator"></div>
+    
+    <!-- Seção de localização -->
+    <div class="profileLocation" data-type="Location">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <span style="font-weight:550;font-size:17px">BR</span>
+    </div>
+    </div>
+    </div>
+
+    
+</div>
+
+
+
+</div>
+
+    <script src="/js/cur-snow.js"></script>
+    <script>
+// Código do container com animações otimizadas
+const container = document.getElementById('container');
+
+// Configurações iniciais com propriedades otimizadas
+container.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+container.style.zIndex = '1';
+container.style.position = 'relative';
+// Adicionar will-change para informar ao navegador sobre transformações futuras
+container.style.willChange = 'transform';
+// Aplicar aceleração de hardware
+container.style.backfaceVisibility = 'hidden';
+container.style.transformStyle = 'preserve-3d';
+
+// Variáveis para animação suave
+let currentX = 0;
+let currentY = 0;
+let targetX = 0;
+let targetY = 0;
+let rafId = null;
+
+// Função de animação com requestAnimationFrame
+function animateTransform() {
+    // Interpolação suave entre posição atual e alvo (easing)
+    currentX += (targetX - currentX) * 0.1;
+    currentY += (targetY - currentY) * 0.1;
+    
+    // Aplicar transformação
+    container.style.transform = `
+        perspective(1000px)
+        rotateX(${currentY}deg)
+        rotateY(${currentX}deg)
+    `;
+    
+    // Continuar a animação apenas se houver movimento significativo
+    if (Math.abs(targetX - currentX) > 0.01 || Math.abs(targetY - currentY) > 0.01) {
+        rafId = requestAnimationFrame(animateTransform);
+    } else {
+        rafId = null;
+    }
+}
+
+// Efeito de movimento do mouse dentro do container
+container.addEventListener('mousemove', (e) => {
+    const rect = container.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const offsetX = (x - centerX) / centerX;
+    const offsetY = (y - centerY) / centerY;
+    const intensity = 15;
+    
+    // Atualizar os valores alvo
+    targetX = offsetX * intensity;
+    targetY = offsetY * intensity;
+    
+    // Iniciar animação se não estiver rodando
+    if (!rafId) {
+        rafId = requestAnimationFrame(animateTransform);
+    }
+    
+    // Prevenindo propagação do evento
+    e.stopPropagation();
+});
+
+// Quando o mouse sai do container
+container.addEventListener('mouseleave', () => {
+    // Definir alvo como posição inicial
+    targetX = 0;
+    targetY = 0;
+    
+    // Iniciar animação de retorno se não estiver rodando
+    if (!rafId) {
+        rafId = requestAnimationFrame(animateTransform);
+    }
+});
+
+// Adicionando evento para prevenir a criação de sparkles dentro do container
+container.addEventListener('mouseenter', (e) => {
+    e.stopPropagation();
+});
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const popup = document.getElementById('redirect-popup');
+        const popupCancel = document.getElementById('popup-cancel');
+        const popupConfirm = document.getElementById('popup-confirm');
+        const popupMessage = document.getElementById('popup-message');
+        
+        let currentLink = '';
+        let currentPlatform = '';
+        
+        // Adicionar evento de clique aos links com id trigger-popup
+        document.querySelectorAll('a#trigger-popup').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                currentLink = this.getAttribute('href');
+                currentPlatform = this.getAttribute('data-type');
+                
+                // Configurar a mensagem do popup
+                popupMessage.textContent = `Você será redirecionado para ${currentPlatform}. Deseja continuar?`;
+                
+                // Mostrar o popup
+                popup.classList.add('active');
+            });
+        });
+        
+        // Botão Cancelar
+        popupCancel.addEventListener('click', function() {
+            popup.classList.remove('active');
+        });
+        
+        // Botão Confirmar
+        popupConfirm.addEventListener('click', function() {
+            window.open(currentLink, '_blank');
+            popup.classList.remove('active');
+        });
+        
+        // Fechar o popup ao clicar fora dele
+        popup.addEventListener('click', function(e) {
+            if (e.target === popup) {
+                popup.classList.remove('active');
+            }
+        });
+    });
+</script>
+<script>
+    // Atualizar status na página a cada 10 segundos
+    setInterval(() => {
+      fetch('/status')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('currentStatus').innerText = data.status;
+        });
+    }, 10000);
+  </script>
+  <script>
+    // Script isolado para o áudio de chuva em background
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleciona especificamente o áudio de chuva, não o player de música
+    const rainAudio = document.querySelector('audio[src="/img/praiafake.mp3"]');
+    
+    if (!rainAudio) {
+        console.error('Elemento de áudio da chuva não encontrado');
+        return;
+    }
+    
+    // Configurar o áudio de chuva
+    rainAudio.loop = true;
+    rainAudio.volume = 0.05; // Volume baixo para som ambiente
+    
+    // Variável para controlar se já tentamos iniciar o áudio
+    let audioStartAttempted = false;
+    
+    // Função para tentar iniciar o áudio da chuva
+    function tryPlayRainAudio() {
+        if (audioStartAttempted) return;
+        audioStartAttempted = true;
+        
+        const playPromise = rainAudio.play();
+        
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                console.log('Autoplay do áudio de chuva bloqueado. Aguardando interação:', error);
+                
+                // Criar uma função de evento única para iniciar o áudio
+                const startRainAudio = function() {
+                    rainAudio.play().catch(err => {
+                        console.log('Ainda não foi possível iniciar o áudio de chuva:', err);
+                    });
+                    
+                    // Remover os listeners após a primeira tentativa
+                    document.removeEventListener('click', startRainAudio);
+                    document.removeEventListener('touchstart', startRainAudio);
+                    document.removeEventListener('keydown', startRainAudio);
+                };
+                
+                // Adicionar eventos para diferentes tipos de interação
+                document.addEventListener('click', startRainAudio, { once: true });
+                document.addEventListener('touchstart', startRainAudio, { once: true });
+                document.addEventListener('keydown', startRainAudio, { once: true });
+            });
+        }
+    }
+    
+    // Tentar iniciar o áudio imediatamente
+    tryPlayRainAudio();
+    
+    // Backup: tentar novamente após 1 segundo
+    setTimeout(tryPlayRainAudio, 1000);
+});
+  </script>
+</body>
+
+</html>
