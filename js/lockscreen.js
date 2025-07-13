@@ -84,6 +84,7 @@ function criarLockscreen() {
               container.style.opacity = '1';
               container.style.transition = 'opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1)';
           }
+          new Audio('/img/music.mp3').play().catch(e => console.log('Audio play failed:', e));
           
           // Executar animação dos elementos após desbloqueio
           setTimeout(() => {
