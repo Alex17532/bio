@@ -1,6 +1,6 @@
 // Função para criar a lockscreen
 function criarLockscreen() {
-  // Criar elemento da lockscreen
+  // Criar elemento da lockscre
   const lockscreen = document.createElement('div');
   lockscreen.id = 'lockscreen';
   lockscreen.classList.add('lockscreen');
