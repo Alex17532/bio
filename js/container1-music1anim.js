@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Move up do container principal - agora usando nossa variável targetYOffset
             if (container) {
                 // Definir o deslocamento alvo para -60px
-                targetYOffset = -60;
+                targetYOffset = -20;
                 
                 // Não precisamos mais da animação CSS para moveUp,
                 // pois agora controlamos o movimento através da animação JS
